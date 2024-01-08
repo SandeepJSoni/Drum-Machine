@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {  
   display: flex;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  
+}
+
+.container, .controls  {
+  margin:auto;
+  background-color: darkkhaki;
+  width: 35vw;
+  position: absolute;
+  border: 2px solid orangered;
+  transform-origin: 50% 0%;
+  padding: 0;
+
+  font-size: calc(10px + 2vmin);
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+.container {
+  background-color: darkkhaki;
+  height: 50vh;
+}
+
+.heading {
+  position: absolute;
+  top: 0%;
+}
+
+.controls  {
+  border-color: brown;
+  height: 25vh;
+  top: 50vh;
+}
+
+.key {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  vertical-align: middle;
+
+  position: absolute;
+  
+  border-radius: 46%;
 }
 
-.App-link {
-  color: #61dafb;
+
+.key {
+  
+  width: 5vw;
+  /* calc(10px + 10vmin) */
+  max-width: 100px;
+  border: 1px solid brown;
+  box-shadow: 2px 2px rgb(92, 30, 30); 
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.key:nth-of-type(1) {
+  left: 5%;
+  top: 18%;
+  vertical-align: middle;
 }
+.key:nth-of-type(2) {
+  left: 45%;
+  top: 18%;
+}
+.key:nth-of-type(3) {
+  right: 5%;
+  top: 18%;
+}
+.key:nth-of-type(4) {
+  left: 5%;
+  top: 44%;
+}
+.key:nth-of-type(5) {
+  left: 45%;
+  top: 44%;
+}
+.key:nth-of-type(6) {
+  right: 5%;
+  top: 44%;
+}
+.key:nth-of-type(7) {
+  left: 5%;
+  top: 70%;
+}
+.key:nth-of-type(8) {
+  left: 45%;
+  top: 70%;
+}
+.key:nth-of-type(9) {
+  right: 5%;
+  top: 70%;
+}
+
+#display {
+  position: absolute;
+  background-color: lightgray;
+  width: 400px;
+  height: 40px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
